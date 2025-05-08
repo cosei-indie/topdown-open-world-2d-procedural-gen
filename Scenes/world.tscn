@@ -1,0 +1,35 @@
+[gd_scene load_steps=10 format=3 uid="uid://6vqhk7duwd76"]
+
+[ext_resource type="TileSet" uid="uid://ducepchshqd8c" path="res://Ressources/Water.tres" id="1_5a7ea"]
+[ext_resource type="TileSet" uid="uid://b0kubwvxg4i43" path="res://Ressources/Grass.tres" id="1_a02cp"]
+[ext_resource type="Script" uid="uid://dykng8s8thlp5" path="res://Scenes/world.gd" id="1_o06y3"]
+[ext_resource type="TileSet" uid="uid://dsardgn1rxw5k" path="res://Ressources/Hills.tres" id="2_go701"]
+[ext_resource type="TileSet" uid="uid://bylplkinom8p1" path="res://Ressources/Mush.tres" id="3_8j60k"]
+[ext_resource type="TileSet" uid="uid://5di1lcxgvebv" path="res://Ressources/MushHills.tres" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://qbboiltcabjg" path="res://Scenes/player.tscn" id="6_5ukr8"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o06y3"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k7acu"]
+noise = SubResource("FastNoiseLite_o06y3")
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_o06y3")
+noise_height_text = SubResource("NoiseTexture2D_k7acu")
+
+[node name="Water" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_5a7ea")
+
+[node name="Grass" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_a02cp")
+
+[node name="Mush" type="TileMapLayer" parent="."]
+tile_set = ExtResource("3_8j60k")
+
+[node name="Hills" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_go701")
+
+[node name="MushHills" type="TileMapLayer" parent="."]
+tile_set = ExtResource("5_fo5ed")
+
+[node name="Player" parent="." instance=ExtResource("6_5ukr8")]

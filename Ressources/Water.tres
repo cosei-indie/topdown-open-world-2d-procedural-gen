@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://ducepchshqd8c"]
+
+[ext_resource type="Texture2D" uid="uid://7ono0avp7pj" path="res://Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_xn13u"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
+texture = ExtResource("1_xn13u")
+0:0/animation_columns = 4
+0:0/animation_frame_0/duration = 0.3
+0:0/animation_frame_1/duration = 0.3
+0:0/animation_frame_2/duration = 0.3
+0:0/animation_frame_3/duration = 0.3
+0:0/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_aqk2v")
